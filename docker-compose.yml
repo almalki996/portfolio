@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    container_name: portfolio_web
+    restart: always
+    ports:
+      - "3005:3000" # توجيه البورت الخارجي 3005 إلى البورت الداخلي 3000
+    environment:
+      - NODE_ENV=production
